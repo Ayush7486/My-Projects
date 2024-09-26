@@ -1,0 +1,723 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100%;
+    width: 100%;
+}
+
+@font-face { 
+    font-family: Neue Montreal;
+    src: url(./NeueMontreal-Medium.otf);
+}
+
+@font-face { 
+    font-family: Oxanium;
+    src: url(Oxanium-VariableFont_wght.ttf);
+}
+
+ /* <uniquifier>: Use a unique and descriptive class name
+ <weight>: Use a value from 200 to 800 */
+
+.oxanium {
+  font-family: "Oxanium", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    padding: 0px 6vw;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 20vh;
+    position: fixed;
+    z-index: 9;
+    font-weight: 900;
+}
+
+.navbar-left, .navbar-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.navbar-right {
+    justify-content: flex-end;
+}
+
+.navbar-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-logo {
+    height: 40px;
+    /* visibility: visible; */
+    display: flex;
+}
+
+.menu-button, .find-dealer-button {
+    background: none;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    padding: 10px;
+    transition: color 0.3s;
+    font-family: "Oxanium", sans-serif;
+}
+
+.menu-button:hover, .find-dealer-button:hover {
+    color: #ccc;
+}
+
+#page {
+    height: 100vh;
+    display: flex;
+    justify-content: center; 
+    overflow: hidden;
+    background-color: #000;
+}
+
+#page1-container {
+    z-index: 9;
+    text-align: center;
+    top: 30%;
+    position: relative;
+    font-family: "Oxanium", sans-serif;
+}
+
+#page1-container h1 {
+    color: rgb(255, 255, 255);
+    font-size: 20vh;
+    font-family: "Oxanium", sans-serif;
+}
+
+.span1, .span2, .span3 {
+    opacity: 0;
+}
+
+#page1-container h2 {
+    color: rgb(255, 255, 255);
+    font-size: 5vh;
+    font-family: "Oxanium", sans-serif;
+    opacity: 0;
+    padding: 15px;
+}
+
+#page1-container button {
+    color: rgb(0, 0, 0);
+    font-size: 2vh;
+    font-family: "Oxanium", sans-serif;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 15px;
+    background-color: rgb(255, 255, 255);
+    opacity: 0;
+
+}
+
+
+#line {
+    height: 2px;
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+    width: 88vw;
+    position: fixed;
+    align-self: center;
+    top: 20vh;
+    opacity: 0;
+    z-index: 9;
+}
+
+#page1 {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+}
+
+#page2 {
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    top: 20%;
+}
+
+#page3 {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+}
+
+#page4 {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+}
+
+#video-container1 {
+    height: 98vh;
+    width: 98vw;
+    /* background-color: rgb(255, 0, 0); */
+    position: relative;
+    top: 0vh;
+    overflow: hidden;
+}
+
+#video-container1 video {
+    height: 150%;
+    position: relative;
+    top: 10%;
+    left: -20%;
+}
+
+#video-container3 {
+    height: 58vh;
+    width: 58vw;
+    /* background-color: rgb(255, 0, 0); */
+    position: relative;
+    top: -10vh;
+}
+
+#video-container3 img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+#video-container1 img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+#video-container2 {
+    height: 58vh;
+    width: 58vw;
+    background-color: rgb(255, 0, 0);
+    position: relative;
+    top: -10vh;
+}
+
+#video-container2 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+#text-container1-p2 {
+    /* background-color: red; */
+    width: 40vw;
+    font-size: 7vh;
+    /* display: none; */
+    /* opacity: 0; */
+    position: relative;
+    top: 0%;
+    font-family: Neue Montreal;
+    text-align: center;
+}
+
+#text-container3-p2 {
+    /* background-color: red; */
+    width: 40vw;
+    font-size: 4vh;
+    /* display: none; */
+    /* opacity: 0; */
+    position: relative;
+    top: 0%;
+    font-family: Neue Montreal;
+}
+#text-container2-p2 {
+    /* background-color: red; */
+    width: 40vw;
+    font-size: 4vh;
+    /* display: none; */
+    /* opacity: 0; */
+    position: relative;
+    top: 0%;
+}
+
+#text-container-p2 {
+    /* background-color: red; */
+    width: 40vw;
+    font-size: 4vh;
+    /* display: none; */
+    /* opacity: 0; */
+    position: relative;
+    top: 0%;
+}
+
+.new-logo {
+    display: none;
+    height: 120px;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 0 2vw;
+        height: 15vh;
+        width: 100vw;
+    }
+
+    #page2 {
+        height: 150vh;
+        width: 100vw;
+    }
+
+    .navbar-logo {
+        height: 30px; /* Adjust size as needed */
+    }
+
+    .menu-button, .find-dealer-button {
+        font-size: 14px; /* Adjust font size for better readability on smaller screens */
+    }
+
+    #line {
+        top: 15vh;
+    }
+
+    #video-container {
+        top: -10vh;
+        height: 80vh;
+    }
+
+    #text-container-p2 {
+        width: 80vw;
+        font-size: 2.5vh;
+    }
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+
+.slide {
+    width: 100vw;
+    height: 100vh;
+}
+
+.slide > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-button {
+    position: absolute;
+    z-index: 9;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.slider-button-left {
+    position: absolute;
+    left: 10px;
+    opacity: 0;
+}
+
+.slider-button i { 
+    font-size: 20px;
+}
+
+.slider-button-right {
+    position: absolute;
+    right: 10px;
+    opacity: 0;
+}
+
+#page3 {
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    /* gap: 10px; */
+    /* overflow: scroll; */
+}
+
+#box1, #box2, #box3, #box4, #box5, #box6 {
+    display: flex;
+    align-items: end;
+    /* justify-content: baseline; */
+    width: calc(93vw / 6);
+    height: 65vh;
+    border-radius: 10px;
+    position: relative;
+    flex: 0 0 auto;
+    overflow: hidden;
+}
+
+#box1 img {
+    height: 100%;
+    position: absolute;
+    left: -40%;
+}
+
+#box2 img {
+    height:  100%;
+    position: absolute;
+    left: -50%;
+}
+
+#box3 img {
+    height:  100%;
+    position: absolute;
+    left: -60%;
+    /* top: -20%; */
+}
+
+#box4 img {
+    height:  100%;
+    position: absolute;
+    left: -50%;
+}
+
+#box5 img {
+    height:  100%;
+    position: absolute;
+    left: -50%;
+}
+
+#box6 img {
+    height:  100%;
+    position: absolute;
+    left: -50%;
+}
+
+.content1, .content2, .content3, .content4, .content5 {
+    width: 30vw;
+    height: 20vh;
+    padding: 40px;
+    position: relative;
+    text-align: right;
+    opacity: 0;
+    color: #fff;
+}
+
+.content6 {
+    width: 30vw;
+    height: 20vh;
+    padding: 40px;
+    position: relative;
+    text-align: left;
+    opacity: 0;
+    color: #fff;
+}
+
+video {
+    width:130%;
+    top: -70%;
+    position: relative;
+}
+
+#container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    width: 94.5vw;
+    gap: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: Neue Montreal;
+}
+
+.new {
+    position: absolute;
+}  
+
+#box1 {
+    background-color: rgb(255, 0, 0);
+}
+
+#box2 {
+    background-color: rgb(0, 255, 0);
+}
+
+#box3 {
+    background-color: rgb(0, 0, 255);
+}
+
+#box4 {
+    background-color: rgb(255, 255, 0);
+}
+
+#box5 {
+    background-color: rgb(255, 0, 255);
+}
+
+#box6 {
+    background-color: rgb(0, 255, 255);
+}
+
+footer {
+    background-color: #000;
+    padding: 20px 0;
+}
+
+
+.footer-header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+.footer-header h1 {
+    font-family: 'Oxanium', sans-serif;
+    padding-bottom: 10px;
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+.header-line {
+    width: 98vw;
+    height: 1px;
+    background-color: darkslategray;
+    margin: 10px auto;
+}
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.column a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.column a:hover {
+    color: red;
+}
+
+.column a:active {
+    color: #ccc;
+}
+
+.flag-icon {
+    display: inline-block;
+    width: 20px;
+    height: 15px;
+    background-image: url('path-to-flag-image.png'); /* replace with actual flag image path */
+    background-size: cover;
+    vertical-align: middle;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.footer-social a {
+    color: #fff;
+    font-size: 18px;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: red;
+}
+.social-media-section {
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px 0;
+}
+
+.social-media-section h4 {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+}
+
+.social-media li {
+    margin: 0 10px;
+}
+
+.social-media li img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-bottom {
+    padding-top: 0px;
+    margin-top: 10px;
+    text-align: center;
+    padding: 10px 0;
+    color: #ccc; /* Light gray text for the footer bottom */
+    font-size: 12px;
+}
+
+.random{
+    text-align: center;
+    padding: 10px 0;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.random img{
+    margin-top: 30px;
+    width: 60px;
+    height: 80px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.explore-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #000000;
+    position: relative;
+    /* top: ; */
+}
+
+#lines {
+    position: absolute;
+    width: 94%;
+    height: 1px;
+    background-color: #ffffff;
+    /* border: solid #fff 1px; */
+    z-index: 9;
+    padding: 0px 6vw;
+    position: relative;
+    left: 3vw;
+    top: -20%;
+}
+
+.explore-header {
+    margin-bottom: 30px;
+}
+
+.explore-header .logo {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.explore-header h2 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.explore-header p {
+    font-size: 1.2em;
+    margin: 5px 0 20px;
+    color: #a5a5a5;
+}
+
+.explore-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #1f1f1f;
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+}
+
+.card p {
+    font-size: 1em;
+    color: #a5a5a5;
+    line-height: 1.5;
+}
+
+.card:hover {
+    transform: scale(1.15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.blurred {
+    filter: blur(4px);
+}
+
+.blurred:hover {
+    filter: none;
+}
